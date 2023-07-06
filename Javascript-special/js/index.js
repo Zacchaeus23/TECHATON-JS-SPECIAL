@@ -30,6 +30,48 @@ console.log(sentence.slice(0, 120));
 console.log(sentence.slice(120));
 
 
+// TASK 2: 
+const shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
+shopping[0] = 'Cookies';
 
+//Accessing a multidimensional array
+const arr = [0 , 80, 'Love', ['Joy', 'Amen', 14, 32], ['Orange', 'Apples', 'Mangoes']]
+console.log(arr[3][1]);
 
-// console.log(name1);
+// 1. .indexOf() to find the index of an array
+console.log(shopping.indexOf('hummus'));
+// It will return -1 because the index isn't in the array
+console.log(arr.indexOf('Joy'));
+//returns the index of the array at index 3
+console.log(arr[3].indexOf('Joy'));
+
+//2. .push() to add item to the end of your array 
+shopping.push('burger');
+console.log(shopping);
+
+const cities = ["Manchester", "Liverpool"];
+cities.push("Bristol");
+console.log(cities); 
+
+//3. .unshift() to add item to the start of the array
+cities.unshift('Ibadan')
+console.log(cities);
+
+//4 .pop() Used to remove an item at the end of the array 
+const removedCity = cities.pop();
+console.log(removedCity);
+
+//5 .shift() used to remove item at the beginning of the array
+const removedShoppedItem = shopping.shift();
+console.log(removedShoppedItem);
+console.log(shopping);
+
+//6 .splice() This is done when you know the index you want to start from
+const carBrand = ["Audi", "BMW", "Mustang", "Porsche", "Ferrari"];
+const index = carBrand.indexOf("BMW");
+
+if(index !== -1) {
+    carBrand.splice(index, 2); // the first indicates where it should start , the second indicates how many items to be removed
+}
+
+console.log(carBrand);
