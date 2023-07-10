@@ -1,33 +1,33 @@
-// let name1 = 'gift';
-// name1 = 'Joy'
+// // let name1 = 'gift';
+// // name1 = 'Joy'
 
-const sentence = 'JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.';
+// const sentence = 'JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.';
 
-const info =' Name, phone number, email address, company address, orders and much more.'
+// const info =' Name, phone number, email address, company address, orders and much more.'
 
-const mood = ' Delightful!'
+// const mood = ' Delightful!'
 
-// STRING METHOD
+// // STRING METHOD
 
-//1 .charAt() Character at a particular index
+// //1 .charAt() Character at a particular index
 
-console.log(sentence.charAt(90));
+// console.log(sentence.charAt(90));
 
-//2 .concat() Joins two or more variables
+// //2 .concat() Joins two or more variables
 
-console.log(info.concat(sentence));
+// console.log(info.concat(sentence));
 
-//3 .replace() replaces the first word or character found 
+// //3 .replace() replaces the first word or character found 
 
-console.log(info.replace('Name', 'Full Name'));
-console.log(sentence.replace('is', 'was'));
+// console.log(info.replace('Name', 'Full Name'));
+// console.log(sentence.replace('is', 'was'));
 
-//4 .repeat() returns a new string in the number of times repeated
-console.log(`I am very ${mood.repeat(3)}`);
+// //4 .repeat() returns a new string in the number of times repeated
+// console.log(`I am very ${mood.repeat(3)}`);
 
-//5 .slice() extracts a section of a string and returns it as a new string
-console.log(sentence.slice(0, 120));
-console.log(sentence.slice(120));
+// //5 .slice() extracts a section of a string and returns it as a new string
+// console.log(sentence.slice(0, 120));
+// console.log(sentence.slice(120));
 
 
 // TASK 2: 
@@ -71,7 +71,45 @@ const carBrand = ["Audi", "BMW", "Mustang", "Porsche", "Ferrari"];
 const index = carBrand.indexOf("BMW");
 
 if(index !== -1) {
-    carBrand.splice(index, 2); // the first indicates where it should start , the second indicates how many items to be removed
+    carBrand.splice(index, 1); // the first indicates where it should start , the second indicates how many items to be removed
 }
 
 console.log(carBrand);
+
+//7 .copyWithin() It works to copy a data of an array to another
+console.log(carBrand.copyWithin(0, 2, 3));
+
+// Copy to index 1 all elements from index 3 to the end
+console.log(carBrand.copyWithin(0, 2, ));
+// Expected output: Array ["d", "d", "e", "d", "e"]
+
+//8 .every() runs to see if every value passes the test function
+ 
+ const numberDivisibleByTwo = (x) => x / 2;
+ 
+
+ const num = [10, 20, 30, 40, 50, 6, 72, 84, 96, 120];
+
+ console.log(num.every(numberDivisibleByTwo));
+
+ //9 .fill() Changes the value of an array till the index you want to stop
+ const foods = ["bread", "milk", "rice", "fish", "noodles"];
+ console.log(foods.fill('Chicken', 3 , 5));
+ console.log(foods.fill('turkey', 2));
+ console.log(foods.fill('Goat'));
+
+ //10 .filter() filters the element that meets the specific requirements that need filtering
+ const food = ["pounded yam", "cheese", "rice", "fish", "noodles"];
+ const filterFood = food.filter(food => food.length > 4)
+ console.log(filterFood);
+
+ //11 .find() finds the first element in the array that satisfy the function of what you are looing for
+ let findFood = food.find((x) => x === 'cheese');
+ console.log(findFood);
+
+ //12 .findIndex() finds the index you are looking for
+ findFood = food.findIndex((x) => x ==='rice' )
+ console.log(findFood);
+ 
+
+
