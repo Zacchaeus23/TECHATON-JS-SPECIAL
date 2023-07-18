@@ -78,6 +78,24 @@ console.log(carBrand.copyWithin(0, 2, ));
  //12 .findIndex() finds the index you are looking for
  findFood = food.findIndex((x) => x ==='rice' )
  console.log(findFood);
+
+
+ let placeholders = ["Firstname" , "Lastname" , "Email" , "Password", "submit"];
+ let nums = [1, 24, 34, 26, 44];
+ 
+ let object = {}
+
+
+ for(i = 0; i < placeholders.length && i < num.length; i++){
+    //  console.log(num[i] + 1);
+    const assignArray = () => {
+        return object = placeholders[i] +" " + nums[i];
+    }
+    console.log(assignArray());
+    
+
+
+};
  
 
 
